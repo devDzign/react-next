@@ -10,6 +10,7 @@ class MovieApp extends App {
     static async getInitialProps(appContext) {
         // Executing getInitialProps of page you are navigated to
         const appProps = await App.getInitialProps(appContext)
+
         return { ...appProps }
     }
 
