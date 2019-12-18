@@ -50,6 +50,15 @@ export const getMovies = async () => {
     return await MOVIE_DATA;
 }
 
+// export const getMovies = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             // resolve(MOVIE_DATA)
+//             reject('Cannot fetch data!')
+//         }, 2000)
+//     })
+// }
+
 export const getCategories = async () => {
     return await CATEGORIES_DATA;
 }
