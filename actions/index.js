@@ -69,6 +69,7 @@ export const getMovieById = async (id) => {
 
 export const createMovie = async (movie) => {
     // Create ID for movie
+    movie.id = Math.random().toString(36).substr(2, 7);
     MOVIE_DATA.push(movie);
 
     return MOVIE_DATA;
