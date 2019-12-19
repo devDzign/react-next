@@ -33,9 +33,7 @@ const MOVIE_DATA = [
         image: 'https://img.cinemablend.com/filter:scale/quill/0/f/5/2/a/6/0f52a6843a25c1a5c1f9a0c00548cad9e1d912e2.jpg?mw=600',
         cover: 'https://images.unsplash.com/photo-1462759353907-b2ea5ebd72e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80'
     }
-]
-
-
+];
 
 
 const CATEGORY_DATA = [
@@ -43,11 +41,11 @@ const CATEGORY_DATA = [
     {id: 'c-2', name: 'action'},
     {id: 'c-3', name: 'adventeru'},
     {id: 'c-4', name: 'historical'},
-]
+];
 
 export const getMovies = async () => {
     return await MOVIE_DATA;
-}
+};
 
 // export const getMovies = () => {
 //     return new Promise((resolve, reject) => {
@@ -60,12 +58,18 @@ export const getMovies = async () => {
 
 export const getCategories = async () => {
     return await CATEGORY_DATA;
-}
+};
 
 export const getMovieById = async (id) => {
-    const movieIndex = await MOVIE_DATA.findIndex(m => m.id === id)
-    const movie = await MOVIE_DATA[movieIndex]
+    const movieIndex = await MOVIE_DATA.findIndex(m => m.id === id);
+    const movie = await MOVIE_DATA[movieIndex];
 
     return movie
+};
 
-}
+export const createMovie = async (movie) => {
+    // Create ID for movie
+    MOVIE_DATA.push(movie);
+
+    return MOVIE_DATA;
+};
